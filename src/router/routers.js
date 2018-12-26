@@ -63,7 +63,7 @@ export default [
     name: 'multilevel',
     meta: {
       icon: 'md-menu',
-      title: '某些多级菜单'
+      title: 'CA超级管理'
     },
     component: Main,
     children: [
@@ -114,7 +114,160 @@ export default [
     name: 'multilevel',
     meta: {
       icon: 'md-menu',
-      title: 'RA'
+      title: 'CA业务管理'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'level_2_1',
+        name: 'level_2_1',
+        meta: {
+          icon: 'md-funnel',
+          title: '二级-1'
+        },
+        component: () => import('@/view/multilevel/level-2-1.vue')
+      },
+      {
+        path: 'level_2_2',
+        name: 'level_2_2',
+        meta: {
+          access: ['super_admin'],
+          icon: 'md-funnel',
+          showAlways: true,
+          title: '二级-2'
+        },
+        component: parentView,
+        children: [
+          {
+            path: 'level_2_2_1',
+            name: 'level_2_2_1',
+            meta: {
+              icon: 'md-funnel',
+              title: '三级'
+            },
+            component: () => import('@/view/multilevel/level-2-2/level-3-1.vue')
+          }
+        ]
+      },
+      {
+        path: 'level_2_3',
+        name: 'level_2_3',
+        meta: {
+          icon: 'md-funnel',
+          title: '二级-3'
+        },
+        component: () => import('@/view/multilevel/level-2-3.vue')
+      }
+    ]
+  },
+  {
+    path: '/multilevel',
+    name: 'multilevel',
+    meta: {
+      icon: 'md-menu',
+      title: 'KMC操作'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'level_2_1',
+        name: 'level_2_1',
+        meta: {
+          icon: 'md-funnel',
+          title: '二级-1'
+        },
+        component: () => import('@/view/multilevel/level-2-1.vue')
+      },
+      {
+        path: 'level_2_2',
+        name: 'level_2_2',
+        meta: {
+          access: ['super_admin'],
+          icon: 'md-funnel',
+          showAlways: true,
+          title: '二级-2'
+        },
+        component: parentView,
+        children: [
+          {
+            path: 'level_2_2_1',
+            name: 'level_2_2_1',
+            meta: {
+              icon: 'md-funnel',
+              title: '三级'
+            },
+            component: () => import('@/view/multilevel/level-2-2/level-3-1.vue')
+          }
+        ]
+      },
+      {
+        path: 'level_2_3',
+        name: 'level_2_3',
+        meta: {
+          icon: 'md-funnel',
+          title: '二级-3'
+        },
+        component: () => import('@/view/multilevel/level-2-3.vue')
+      }
+    ]
+  },
+  {
+    path: '/multilevel',
+    name: 'multilevel',
+    meta: {
+      icon: 'md-menu',
+      title: 'RA业务管理'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'level_2_1',
+        name: 'level_2_1',
+        meta: {
+          icon: 'md-funnel',
+          title: '二级-1'
+        },
+        component: () => import('@/view/multilevel/level-2-1.vue')
+      },
+      {
+        path: 'level_2_2',
+        name: 'level_2_2',
+        meta: {
+          access: ['super_admin'],
+          icon: 'md-funnel',
+          showAlways: true,
+          title: '二级-2'
+        },
+        component: parentView,
+        children: [
+          {
+            path: 'level_2_2_1',
+            name: 'level_2_2_1',
+            meta: {
+              icon: 'md-funnel',
+              title: '三级'
+            },
+            component: () => import('@/view/multilevel/level-2-2/level-3-1.vue')
+          }
+        ]
+      },
+      {
+        path: 'level_2_3',
+        name: 'level_2_3',
+        meta: {
+          icon: 'md-funnel',
+          title: '二级-3'
+        },
+        component: () => import('@/view/multilevel/level-2-3.vue')
+      }
+    ]
+  },
+  {
+    path: '/multilevel',
+    name: 'multilevel',
+    meta: {
+      icon: 'md-menu',
+      title: 'RA操作'
     },
     component: Main,
     children: [
